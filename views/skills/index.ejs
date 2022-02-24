@@ -8,16 +8,16 @@
 </head>
 <body>
   <body>
-    <h1>Todos</h1>
+    <h1>Skills</h1>
     <% if(error) { %>
       <h2><%= error %></h2>
     <% } %>
     <ul>
-      <% skills.forEach(function(skill) { %>
+      <% skills.forEach(todo => { %>
         <li>
-          <%= skill.text %>
-            - 
-          <%= skill.canCode ? 'Coder' : 'Phony' %>
+          <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
+          -
+          <%= skill.canCode ? "Coder" : "Phony" %>  
         </li>
       <% }) %>
     </ul>
