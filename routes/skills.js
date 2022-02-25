@@ -1,5 +1,5 @@
 import { Router } from 'express'
-// import the Todo data
+// import the skill data
 import * as skillsCtrl from '../controllers/skills.js'
 const router = Router()
 
@@ -16,7 +16,9 @@ const router = Router()
 //   })
 // })
 
-router.get('/', todosCtrl.index)
+router.get('/', skillsCtrl.index)
+
+router.get("/:id", skillsCtrl.show)
 
 export {
   router

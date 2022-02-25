@@ -4,14 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Express Todos</title>
+  <link rel="stylesheet" href="/public/stylesheets/style.css">
+  <title>Express skills</title>
 </head>
 <body>
   <h1><%= title %></h1>
   <% if(error) { %>
     <h2><%= error %></h2>
     <% } else { %>
-      <h2>Todo #<%= skill._id %></h2>
+      <h2>skill #<%= skill._id %></h2>
       <h3><%= skill.text %></h3>
       <p>Complete: <%= skill.canCode ? 'Yes' : 'No' %></p>
     <% } %>
