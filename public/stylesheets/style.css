@@ -35,3 +35,19 @@ li {
 li:hover {
   transform: scale(1.1);
 }
+
+.delete-form {
+  display:inline-block;
+  
+
+}
+
+.delete-form button {
+  background-color: rgb(255, 255, 255);
+  color: red;
+  border: none;
+}
+
+.delete-form button:hover {
+  transform: scale(1.1);
+}
