@@ -27,7 +27,7 @@ function newSkill(req,res) {
 
 function create(req, res){
   console.log(req.body)
-  skillsDb.create(req.body, function(error, todo){
+  skillsDb.create(req.body, function(error, skill){
     res.redirect('/skills')
   })
 }
