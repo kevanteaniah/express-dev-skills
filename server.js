@@ -19,6 +19,12 @@ app.set(
 app.set('view engine', 'ejs')
 
 // middleware
+app.use(function(req, res, next){
+  // console.log('hello sei')
+  next()
+  req.time = new Date().toLocaleTimeString()
+})
+
 app.use(logger('dev'))
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))

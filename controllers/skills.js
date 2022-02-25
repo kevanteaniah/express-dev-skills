@@ -5,7 +5,8 @@ function index(req, res) {
     res.render('skills/index',  {
       title: "title",
       skills: skills,
-      error: error
+      error: error,
+      time: req.time,
     })
   })
 }
@@ -20,7 +21,20 @@ function show(req, res){
   })
 }
 
+function newSkill(req,res) {
+  res.render('skills/new')
+}
+
+function create(req, res){
+  console.log(req.body)
+  skillsDb.create(req.body, function(error, todo){
+    res.redirect('/skills')
+  })
+}
+
 export {
 	index,
-  show
+  show,
+  newSkill as new,
+  create,
 }
